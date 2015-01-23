@@ -15,7 +15,8 @@
     "metalsmith-sass": "latest",
     "metalsmith-collections": "latest",
     "metalsmith": "^0.2.3",
-    "handlebars": "^2.0.0-alpha.2"
+    "handlebars": "^2.0.0-alpha.2",
+    "metalsmith-watch" : "latest"
   }
 }
 

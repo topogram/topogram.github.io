@@ -1,6 +1,6 @@
 ---
 template: home.html
-title: Home
+title: Open-Source for analysis of social network
 date: 23 Jan 2015
 ---
 

@@ -7,6 +7,7 @@ var Metalsmith = require('metalsmith'),
     handlebars = require('handlebars'),
     reverseEach = require( 'bullhorn-handlebars-helpers/src/collection/reverseEach' )( handlebars ),
     highlight  = require('highlight.js'),
+    watch = require('metalsmith-watch'),
     fs = require('fs');
 
 handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.html').toString());
@@ -38,13 +39,13 @@ handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/par
 Metalsmith(__dirname)
     .source('src')
     .use(collections({
-        pages: {
-            pattern: 'docs/*.md'
+        docs: {
+            pattern: 'docs/*.md',
+             sortBy: 'step',
+             reverse: false
         },
         posts: {
-            pattern: 'posts/*.md',
-            sortBy: 'date',
-            reverse: true
+            pattern: 'pages/*.md'
         }
     }))
     .use(markdown({
@@ -67,6 +68,7 @@ Metalsmith(__dirname)
     .use(sass({
         outputStyle: 'compressed'
     }))
+    .use(watch())
     .destination('./build')
     .build(function (err) {
         // console.log(this._metadata.collections);

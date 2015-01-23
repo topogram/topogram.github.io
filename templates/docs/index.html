@@ -1,0 +1,14 @@
+{{> header}}
+<h2>{{title}}</h2>
+
+{{{ contents }}}
+
+<article>
+    <ul>
+        {{#each collections.docs}}
+            <li><a href="/{{this.path}}">{{this.step}} - {{this.title}}</a></li>
+        {{/each}}
+    </ul>
+</article>
+
+{{> footer}}

@@ -1,6 +1,71 @@
 {{> header}}
-    <div class="container">
-        {{ date }}
-        {{{ contents }}}
+<section class="row jumbotron">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+        <h1>Topogram</h1>
+        <p class="lead">Open-source toolkit to process, visualize and analyze text as networks</p>
+        <a class='btn btn-primary' href="/docs">Get Started</a> 
+        <a class='btn btn-default' href="http://github.com/topogram">Download</a> 
+
+        <p><small><a href="http://github.com/topogram/topogram-server/milestones">Release notes</a></small></p>
     </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 carousel slide" id="screenshots-carousel"data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#screenshots-carousel" data-slide-to="0" class=""></li>
+                <li data-target="#screenshots-carousel" data-slide-to="1" class=""></li>
+                <li data-target="#screenshots-carousel" data-slide-to="2" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item">
+                    <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="images/slider-bg.png">
+                    <div class="container">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="images/slider-bg.png">
+                    <div class="container">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+                <div class="item active">
+                    <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="images/slider-bg.png">
+                    <div class="container">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#screenshots-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#screenshots-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+</section>
+
+
+<section>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        
+        <h3>Features</h3>
+        <ul>
+            <li>
+                <p><b><i class="fa fa-upload icon-md icon-color7"></i> Upload your own dataset : </b>
+                Upload raw data files and start to use Topogram. .CSV and .TXT formats are supported.</p>
+            </li>
+
+            <li>
+                <p><i class=" fa fa-users icon-md icon-color5"></i> <b>Discussion Dynamics</b>
+                Online or offline, conversations can not be fitted in a single graph. Topogram shows how users interacts words by analyzing semantics and circulation.</p>
+            </li>
+            <li>
+                <p><b><i class="fa fa-map-marker icon-md icon-color1"></i> Location-based analysis : </b>
+                Projection on maps with timelines allows to see the geographical spread of the information. Maps can be printed, exported and shared easily</p>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h3>Research Papers</h3>
+        <a href="http://clementrenaud.com/uploads/phD/thesis.pdf">
+            <img src="/images/portfolio/full/export.png" alt="">
+        </a>
+        <p><em>Design of a Internet memes data visualisation toolkit </em>by <a href="http://clementrenaud.com">Clément Renaud</a>, 2014</p>
+    </div>
+</section>
 {{> footer}}
