@@ -1,0 +1,21 @@
+{
+  "name": "topogram-docs",
+  "private": true,
+  "scripts": {
+    "build": "node index.js",
+    "deploy": "npm run build && cd build && git init . && git add . && git commit -m \"Deploy\"; git push \"git@github.com:topogram/topogram.github.io.git\" master:gh-pages --force && rm -rf .git"
+  },
+  "dependencies": {
+    "highlight.js": "latest",
+    "bullhorn-handlebars-helpers": "latest",
+    "handlebars": "latest",
+    "metalsmith-templates": "^0.1.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.1.1",
+    "metalsmith-sass": "latest",
+    "metalsmith-collections": "latest",
+    "metalsmith": "^0.2.3",
+    "handlebars": "^2.0.0-alpha.2"
+  }
+}
+
