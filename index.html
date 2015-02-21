@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Topogram - an open-source toolkit for analysis of social network data (NLP, SNA, etc.)">
+    <meta name="author" content="Clément Renaud">
+    <title>Topogram | Open-Source for analysis of social network </title>
+    <link rel="icon" href="/images/favicon.png">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/scss/main.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header id="header" role="banner">
+        <div class="container">
+            <div id="navbar" class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/"><i class="fa fa-home"></i></a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/docs">Quick Start</a></li>
+                        <li><a href="/pages/install">Install</a></li>
+                        <li><a href="/pages/faq">FAQ</a></li>
+                        <li><a href="/pages/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+<section class="row jumbotron">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+        <h1>Topogram</h1>
+        <p class="lead">Open-source toolkit to process, visualize and analyze text as networks</p>
+        <a class='btn btn-primary' href="/docs">Get Started</a> 
+        <a class='btn btn-default' href="http://github.com/topogram">Download</a> 
+
+        <p><small><a href="http://github.com/topogram/topogram-server/milestones">Release notes</a></small></p>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 carousel slide" id="screenshots-carousel"data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#screenshots-carousel" data-slide-to="0" class=""></li>
+                <li data-target="#screenshots-carousel" data-slide-to="1" class=""></li>
+                <li data-target="#screenshots-carousel" data-slide-to="2" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="/uploads/topogram_extract.png">
+                    <div class="container">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="/uploads/saved_file.png">
+                    <div class="container">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="/images/slider-bg.png">
+                    <div class="container">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#screenshots-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#screenshots-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+
+</section>
+<p class="lead well">Topogram is an open-source project. To join the team or get more info, please drop a line at <a href="mailto:hi@topogram.io">hi@topogram.io</a>.</p>
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="box first">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="center">
+                        <i class="fa  fa-search icon-md icon-color2"></i>
+                        <h4>Semantic Analysis</h4>
+                        <p>A powerful indexing engine based on allows you to watch evolution of keywords and expressions in your data.</p>
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-4 col-sm-6">
+                    <div class="center">
+                        <i class=" fa fa-users icon-md icon-color5"></i>
+                        <h4>Discussion Dynamics</h4>
+                        <p>Online or offline, conversations can not be fitted in a single graph. Topogram shows how users interacts words by analyzing semantics and circulation.</p>
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-4 col-sm-6">
+                    <div class="center">
+                        <i class="fa fa-map-marker icon-md icon-color1"></i>
+                        <h4>Location-based analysis</h4>
+                        <p>Projection on maps with timelines allows to see the geographical spread of the information. Maps can be printed, exported and shared easily</p>
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-4 col-sm-6">
+                    <div class="center">
+                        <i class="fa fa-upload icon-md icon-color7"></i>
+                        <h4>Upload your own dataset</h4>
+                        <p>Upload raw data files and start to use Topogram. .CSV and .TXT formats are supported.</p>
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-4 col-sm-6">
+                    <div class="center">
+                        <i class=" fa fa-weibo icon-md icon-color1"></i>
+                        <h4>Chinese Social Media </h4>
+                        <p>Based on research about the Chinese social web, Topogram is ready-to-use adapter for Sina Weibo and support Chinese text.</p>
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-4 col-sm-6">
+                    <div class="center">
+                        <i class="fa fa-html5 icon-md icon-color4"></i>
+                        <h4>Efficient technological stack</h4>
+                        <p>Topogram use Python to analyse data from Elastic Search and Node.js to serve results. On the client side, Angular fuels a visualization engine based on d3.js and HTML5.</p>
+                    </div>
+                </div><!--/.col-md-4-->
+            </div><!--/.row-->
+        </div><!--/.box-->
+    </div><!--/.container-->
+</section><!--/#services-->
+
+
+<section id="portfolio">
+    <div class="container">
+        <div class="box">
+            <div class="center gap">
+                <h3>Screenshots examples</h3>
+                <!-- <p class="lead">Some snapshots of the interface.</p> -->
+            </div><!--/.center-->
+            <!-- <div class="portfolio-filter btn-toolbar btn-group-xs" role="toolbar">
+                <div><a class="btn btn-primary active" href="#" data-filter="*">Topogram</a></div>
+                <div><a class="btn btn-primary" href="#" data-filter=".analyze">Analyze</a></div>
+                <div><a class="btn btn-primary" href="#" data-filter=".visualize">Visualize</a></div>
+                <div><a class="btn btn-primary" href="#" data-filter=".export">Export</a></div>
+            </div> -->
+            <ul class="">
+                <li class="portfolio-item visualize col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/item1.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="By selecting timeframes, you can see evolution and reveal specific time patterns (here a typical breaking news)" href="/images/portfolio/full/ui-timeline.png"><i class="fa fa-eye"></i></a>             
+                            </div>
+                        </div>
+                        <h5>Time-based analysis</h5>
+                    </div>
+                </li><!--/.portfolio-item timeline-->
+                <li class="portfolio-item export visualize col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/item2.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Each dot is a user, each link is a conversational exchange. The size represents activities within the network (RTs, comments, etc.)" href="/images/portfolio/full/item2.png"><i class="fa fa-eye"></i></a>  
+                            </div>
+                        </div> 
+                        <h5>Conversation graphs</h5>         
+                    </div>
+                </li><!--/.portfolio-item conversations-->
+                <li class="portfolio-item visualize col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/moyan-semantic.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Co-occurences of words in the same thread offers a grasp on the semantic structure of the conversation." href="/images/portfolio/full/item6.png"><i class="fa fa-eye"></i></a>           
+                            </div>  
+                        </div>
+                        <h5>Semantic graph</h5>         
+                    </div>           
+                </li><!--/.portfolio-item semantics-->
+                <li class="portfolio-item analyze visualize col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/item5.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="See geographical spread of information based on users location." href="/images/portfolio/full/item5.png"><i class="fa fa-eye"></i></a>          
+                            </div>  
+                        </div>
+                        <h5>Geographical Maps</h5>  
+                    </div>       
+                </li>
+                <li class="portfolio-item analyze col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/ui-kibana-thumb.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Based on the powerful ElasticSearch, you will be able to investigate your data sets by using advanced queries " href="/images/portfolio/full/ui-kibana.png"><i class="fa fa-eye"></i></a>          
+                            </div>  
+                        </div>
+                        <h5>Advanced search</h5>  
+                    </div>       
+                </li><!--/.portfolio-item search-->
+                <li class="portfolio-item analyze visualize col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/item4.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="See who is engaged in conversation and where they live." href="/images/portfolio/full/item4.png"><i class="fa fa-eye"></i></a>          
+                            </div>   
+                        </div>
+                        <h5>User stats</h5>        
+                    </div>           
+                </li><!--/.portfolio-item user stats-->
+                <li class="portfolio-item visualize col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/item3.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Select and highlight part of the conversation" href="/images/portfolio/full/item3.png"><i class="fa fa-eye"></i></a>        
+                            </div> 
+                        </div>
+                        <h5>Focus on specific keywords</h5>          
+                    </div>           
+                </li>
+                <li class="portfolio-item export col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img src="/images/portfolio/thumb/export.png" alt="">
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Export the results to different formats (html, png, pdf) and add it to your own documents" href="/images/portfolio/full/export.png"><i class="fa fa-eye"></i></a>
+                            </div>   
+                        </div>
+                        <h5>Export the results</h5>        
+                    </div>         
+                </li><!--/.portfolio-item export-->
+            </ul>   
+        </div><!--/.box-->
+    </div><!--/.container-->
+</section><!--/#portfolio-->
+
+<section class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <a href="http://clementrenaud.com/uploads/phD/thesis.pdf">
+            <img src="/images/portfolio/full/export.png" alt="">
+        </a>
+        <h3>Research Papers</h3>
+        <p><em>Design of a Internet memes data visualisation toolkit </em>by <a href="http://clementrenaud.com">Clément Renaud</a>, 2014</p>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="box">
+            <div class="center">
+                <h3>Developers</h3>
+                <p>
+                    You are welcome to use, debug, code or contribute to this project by making it yours.  Core technology is written mostly in Python, Bash and Javascript.
+                </p>
+
+                <p>
+                    Everything you need is here :
+                </p>
+                <ul>
+                    <li>
+                        <a class="btn btn-primary" href="https://github.com/topogram/topogram">View the Code on Github</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a class="btn btn-default" href="http://topogram.readthedocs.org" >Read the Docs</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a class="btn btn-default" href="http://app.topogram.io/swagger" >Try the API</a>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="lead">Topogram is an open-source project. <br />
+                To join the team or get more info, please drop a line at <a href="mailto:hi@topogram.io">hi@topogram.io</a>.
+            </p>
+
+            <div class="gap"></div>
+        </div><!--/.box-->
+    </div>
+</section>
+    </div> <!-- end container -->
+    <div class="container">
+        <hr>
+        <div class="row" id="footer">
+            <p class="u-pull-right">
+                Topogram - hi@topogram.io
+            </p>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <script src="/js/jquery.isotope.min.js"></script>
+    <script src="/js/jquery.prettyPhoto.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

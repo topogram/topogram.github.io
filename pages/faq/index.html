@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Topogram - an open-source toolkit for analysis of social network data (NLP, SNA, etc.)">
+    <meta name="author" content="Clément Renaud">
+    <title>Topogram | Frequently Asked Questions </title>
+    <link rel="icon" href="/images/favicon.png">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/scss/main.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header id="header" role="banner">
+        <div class="container">
+            <div id="navbar" class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/"><i class="fa fa-home"></i></a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/docs">Quick Start</a></li>
+                        <li><a href="/pages/install">Install</a></li>
+                        <li><a href="/pages/faq">FAQ</a></li>
+                        <li><a href="/pages/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+
+<h1>Frequently Asked Questions</h1>
+
+
+<div class="row">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <p>You will find here answers to commnly ask questions about Topogram </p>
+<h3 id="general-questions">General questions</h3>
+<hr>
+<h4 id="what-is-topogram-">What is Topogram ?</h4>
+<p><em>Topogram</em> is a web-based dashboard for visualization of data as networks. It allows to easily build dynamic visualization of words, users and places relationships quoted in large corpora of texts by using full-text search.</p>
+<h4 id="why-topogram-">Why Topogram ?</h4>
+<p>Because you need to be able to make sense of a bunch of text data without hours of development. Also because you may want to own your research environment and still be able to use it in your web browser so you can share results and analysis process easily. </p>
+<h4 id="how-does-it-work-">How does it work ?</h4>
+<p><em>Topogram</em> brings together existing algorithms and technology in a single toolkit. The core technology is located in a <a href="https://github.com/topogram/topogram">Python library</a> that takes care of the formatting and processing of the data inputs and outputs. Then, a <a href="https://github.com/topogram/topogram-server">web application</a> allows you to upload data sets, search specific words and phrases in it and visualize different metrics and dynamics for each result. </p>
+<h4 id="how-can-i-start-to-use-topogram-">How can I start to use Topogram ?</h4>
+<ul>
+<li>You can download and install Topogram on your own computer by following the <a href="/pages/install">Install instructions</a>.</li>
+<li>If you need to deploy it on a web server, just use the scripts at <a href="https://github.com/topogram/topogram-deploy">topogram-deploy</a>. The instructions are in the README file.</li>
+<li>Topogram is also available as an online service on <a href="http://app.topogram.io">app.topogram.io</a>. Please request an invitation at <a href="mailto:hi@topogram.io">hi@topogram.io</a> to start use it.</li>
+</ul>
+<h4 id="which-technology-does-topogram-use-">Which technology does Topogram use ?</h4>
+<ul>
+<li>On the server side, Topogram use <a href="http://python.org">Python</a> for the Natural Language Processing (NLP) and analysis with a <a href="http://flask.readthedocs.org">Flask</a> app to serve the final data through a web/REST API. </li>
+<li>The data is stored in <a href="http://elasticsearch.org">Elasticsearch</a>. A mySQL/SQLite db is used to store user-related  informations (emails, passwords, contents, etc.)</li>
+<li>On the client side, the web app use <a href="http://angularjs.org">AngularJS</a> to handle data and pages and <a href="http://d3js.org">d3.js</a></li>
+</ul>
+<h4 id="where-does-topogram-come-from-">Where does Topogram come from ?</h4>
+<p><em>Topogram</em> is evolved from the phD research of <a href="http://clementrenaud.com">Clément Renaud</a> about data mining of social network. You can read the <a href="clementrenaud.com/uploads/phD/thesis.pdf">complete thesis</a> for more info.</p>
+<h4 id="how-can-i-quote-topogram-in-my-paper-">How can I quote Topogram in my paper ?</h4>
+<p>For now, you can quote this conference paper using this <a href="/uploads/topogram.bib">Bibtex entry</a></p>
+<pre><code>Renaud, C. (2014). Meme observation and classification on a large corpus of tweets from Sina Weibo Memes on Sina Weibo. In *Chinese Internet Research Conference (CIRC14)* (pp. 1–9). HK.
+</code></pre><h3 id="using-topogram">Using Topogram</h3>
+<hr>
+<h4 id="how-can-i-make-my-search-queries-more-precise-">How can I make my search queries more precise ?</h4>
+<p>Topogram is using <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax">Elasticsearch parser</a> to transform your query into a searchable entity. You can use different operators such as &quot;&quot; (quote marks), AND or OR.</p>
+<p>Examples :</p>
+<ul>
+<li><code>lol cat</code> : all posts containing  <code>lol</code> and <code>cat</code>.</li>
+<li><code>&quot;lol cat&quot;</code> : all posts containing the phrase <code>lol cat</code>.</li>
+<li><code>lol OR CAT</code> : all posts containing <code>lol</code> or <code>cat</code>.</li>
+<li><code>lol AND CAT</code> : all posts containing <code>lol</code> and <code>cat</code>.</li>
+</ul>
+<h2 id="-">#</h2>
+
+    </div>
+
+</div>
+    </div> <!-- end container -->
+    <div class="container">
+        <hr>
+        <div class="row" id="footer">
+            <p class="u-pull-right">
+                Topogram - hi@topogram.io
+            </p>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <script src="/js/jquery.isotope.min.js"></script>
+    <script src="/js/jquery.prettyPhoto.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
