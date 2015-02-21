@@ -68,7 +68,7 @@ Metalsmith(__dirname)
     .use(sass({
         outputStyle: 'compressed'
     }))
-    .use(watch())
+    // .use(watch())
     .destination('./build')
     .build(function (err) {
         // console.log(this._metadata.collections);
