@@ -1,0 +1,139 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    100%;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+
+html {
+  // background: url(../img/Electronics_factory_in_Shenzhen-min.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  color:$text-color;
+}
+
+#slideshow {
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  figure {
+    text-align: center;
+  }
+}
+
+#contact {
+  margin: 3em 0;
+  text-align: center;
+  h4 {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.header {
+  text-align: center;
+}
+
+hr {
+  margin: 1em 0;
+}
+
+.lead {
+  font-size: 1.5em;
+}
+
+#features {
+  .header {
+    margin:2em 0 ;
+  }
+  h5 {
+    text-align: center;
+  }
+
+  .plan {
+    list-style: none;
+    margin: 0 0 20px;
+    text-align: center;
+    padding: 0;
+  }
+  .plan li {
+    padding: 10px 0;
+    margin: 0 15px;
+    border-bottom: 1px dashed #eee;
+  }
+  .plan li.plan-name {
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .plan li.plan-price {
+    color: #666;
+    padding: 15px 0;
+    font-size: 48px;
+  }
+  .plan li.plan-action {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 0;
+  }
+  .footnote {
+    text-align: right;
+    font-size: .8em;
+  }
+}
+
+#docs ul{
+  list-style: none;
+}

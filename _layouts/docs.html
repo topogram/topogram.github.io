@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div id="docs" class="row">
+
+<div class="three columns">
+    <ul>
+      {% assign sorted_docs = site.docs | sort:"step" %}
+      {% for post in sorted_docs | sort:"step" %}
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{post.step}} - {{post.title}}</a></li>
+      {% endfor %}
+    </ul>
+</div>
+
+<div class="nine columns">
+    <h2>{{page.title}}</h2>
+    <article class="doc learn">
+        {{ content }}
+    </article>
+</div>
+
+</div>
+
+{{> footer}}
