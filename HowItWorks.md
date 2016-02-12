@@ -114,7 +114,7 @@ To start, you should import some [network data](https://en.wikipedia.org/wiki/Ne
 
 #### Real-time annotations
 
-You can annotate and comments in the graph in real-time with other people
+You can annotate and comment in the graph in real-time with other people
 
 </div>
 
