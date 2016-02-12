@@ -1,0 +1,78 @@
+<div id="{{include.id}}"></div>
+<style>
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+</style>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = 150,
+    height = 150;
+
+var color = d3.scale.category20();
+
+var {{include.id}} = d3.layout.force()
+    .charge(-120)
+    .linkDistance(70)
+    .size([width, height]);
+
+var svg = d3.select("#{{include.id}}").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var nodeData = {{ include.nodeData }};
+
+var graph = {
+  "nodes" : [
+    {"name":"A","color":"blue", "size" : 5},
+    {"name":"B","color":"red", "size" : 10},
+    {"name":"C","color":"green", "size" : 5}
+  ],
+  "links" : [
+    {"source":0,"target":1,"value":1},
+    {"source":2,"target":0,"value":1},
+    {"source":2,"target":1,"value":10}
+  ]
+};
+
+{{include.id}}
+    .nodes(graph.nodes)
+    .links(graph.links)
+    .start();
+
+var {{include.id}}link = svg.selectAll(".link")
+    .data(graph.links)
+  .enter().append("line")
+    .attr("class", "link")
+    .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+var {{include.id}}node = svg.selectAll(".node")
+    .data(graph.nodes)
+  .enter().append("circle")
+    .attr("class", "node")
+    .attr("r", function(d) { return nodeData ? d.size : 5; })
+    .style("fill", function(d) { return nodeData ? d.color : "steelblue"; })
+    .call({{include.id}}.drag);
+
+{{include.id}}node.append("title")
+    .text(function(d) { return d.name; });
+
+{{include.id}}.on("tick", function() {
+  {{include.id}}link.attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+
+  {{include.id}}node.attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+});
+</script>

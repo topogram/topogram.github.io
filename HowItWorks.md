@@ -3,42 +3,45 @@ layout: page
 title: How it Works
 ---
 
-Topogram is a web-based and open-source toolkit to extract and visualize social, semantic and spatio-temporal dynamics within large sets of data. The purpose of this tool is to bring elements of contexts while studying and exploring large sets of text data that describe online activities, understood as online enunciation acts. Topogram link together different dimensions of the data : words (lexical analysis), relationships (networks), time (changes and evolution) and space (geographic mapping).
+Topogram relies on 2 main components
+
+1. [Topogram]( https://github.com/topogram/topogram ) : a Python library to extract networks from raw data
+3. [Topogram Client](https://github.com/topogram/topogram-client) : a collaborative interface to visualize, edit, annotate and publish graphs
+
+The communication between the both can assured by a [redis](http://redis.io/) worker and
+a data store, like [Elastic Search](https://www.elastic.co) for instance.
 
 
-Topogram is divided into 3 main parts
+## Import Data
 
-1. **topogram** : a data mining library to extract networks of words, citations and places from raw data
-2. **topogram-api** : a webserver providing a REST API to access the library
-3. **topogram-client** : a collaborative visualization interface to edit, annotate and publish graphs
+The data you provide to Topogram should follow this format :
+
+| name | description | format | example|
+|---|---|---|---|
+**text** | some text that you want to analyze | [UTF-8](https://en.wikipedia.org/wiki/UTF-8) | *Hello, how are you @topogram ?*
+**timestamp** | a well-formatted time indication | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | *2016-02-12T03:21:55+00:00*
+**source** | The origin of the message | [UTF-8](https://en.wikipedia.org/wiki/UTF-8) | *@clemsos*
+**destination** | the field of destination | [UTF-8](https://en.wikipedia.org/wiki/UTF-8) | *@topogram*
+**additional info** | other relevant informations | [JSON](https://en.wikipedia.org/wiki/JSON) | *{'mobile' : 'iphone', 'retweets' : 1}*
 
 
-## Topogram
+NB: Some [utils](http://topogram.readthedocs.org) are in available to convert CSV files and data streams from Mongo or Elastic Search in this format.
 
----
+## Extract networks
 
-**[Topogram](https://github.com/topogram/topogram)** is a data mining library.
+the [Topogram](http://github.com/topogram/topogram) Python library can extract networks of words, citations and places. It can be used from [command-line](http://topogram.readthedocs.org/en/latest/cli.html) or in a Python script. It relies on 3 components :
 
-It won’t take care of the visualization but it will clean and format your data sets, so you can directly plug the output into something like d3js or matplotlib to see nice colored things.
-
-Topogram relies on three core components :
-
-* *corpora* : files or stream from CSV, Mongo, Elastic Search, etc.
-* *processors* : dates formatters, NLP parsers, relationships extractors, etc.
-* *viz parsers* : data containers returning clean and ready-to-use data for a visualization (time series, network graph, map, etc.).
-
+* corpora : parse a corpus in CSV or stream directly from Mongo, Elastic Search, etc.
+* processors : basic tools to format dates, extract relationships, etc.
+* viz parsers : data containers that will return clean and ready-to-use data for a visualization (time series, network graph, map, etc.).
 
 {% highlight python %}
 
 # Extract a network of words from a dataset
 
-from topogram.corpora import CSVCorpus
-from topogram.processors import CSVCorpus
-from topogram.viz_parsers import WordsNetwork
-
-corpus = CSVCorpus("your_data.csv")
+corpus = CSVCorpus(your_data.csv )
 nlp = NLP("english")
-words_network = WordsNetwork(directed=False)
+words_network = Network(directed=False)
 
 for row in corpus:
     words = nlp(row["content"])
@@ -48,29 +51,75 @@ print words_network.to_JSON() # return a dict with weighted edges and nodes
 
 {% endhighlight %}
 
-View [Topogram on Github](https://github.com/topogram/topogram)
+You can use custom processors - see this example with [Elastic Search](). For more, read [the docs](http://topogram.readthedocs.org) or view on [ Github](https://github.com/topogram/topogram).
 
-## Topogram API
+## Visualize, correct and publish
 
-**Topogram API**
+[Topogram Client](https://github.com/topogram/topogram-client) is a web-based network visualization interface to browse, edit and publish networks.
 
-View [Topogram API on Github](https://github.com/topogram/topogram-server)
+---
 
-{% highlight bash %}
+<div class="row">
 
-  # logging in
-  wget --save-cookies cookies.txt \
-    --post-data 'email=my@email.com&password=mypassword' \
-    http://localhost:5000/api/v1/sessions
+<div class="four columns" markdown="1">
 
-  # gettings a list of all existing datasets
-  wget --load-cookies cookies.txt \
-    -p http://localhost:5000/api/v1/datasets
+#### Edge data
 
-{% endhighlight  %}
+To start, you should import some [network data](https://en.wikipedia.org/wiki/Network_model). You can import the data generated with [Topogram](https://github.com/topogram/topogram) or your own set of edges, following this basic model.
 
-## Topogram Client
+</div>
+<div class="four columns" markdown="1">
 
-**Topogram Client** is a web-based network visualization interface allow to browse networks, based on words, places and times.
+| source | destination | weight |
+|---|---|---|
+|a|b|1|
+|b|c|1|
+|c|a|5|
 
-Data can be browsed through any of those different dimensions : selection of a specific timeframe or geographic zone, lookup of specific words and terms, selection of  parts of the graph, etc.
+</div>
+<div class="four columns">
+  {% include network.html nodeData=0 id="networkBasic" %}
+</div>
+</div>
+
+---
+
+<div class="row">
+<div class="four columns" markdown="1">
+
+#### Node data
+
+To start, you should import some [network data](https://en.wikipedia.org/wiki/Network_model). You can import the data generated with [Topogram](https://github.com/topogram/topogram) or your own set of edges, following this basic model.
+
+</div>
+<div class="four columns" markdown="1">
+
+| node | color | size |
+|---|---|---|
+|a|blue|5|
+|b|red|10|
+|c|green|5|
+
+</div>
+<div class="four columns">
+  {% include network.html nodeData=1 id="networkNodes" %}
+</div>
+</div>
+
+---
+
+<div class="row">
+
+<div class="four columns" markdown="1">
+
+#### Real-time annotations
+
+You can annotate and comments in the graph in real-time with other people
+
+</div>
+
+<div class="seven columns">
+
+  {% include form.html %}
+</div>
+</div>

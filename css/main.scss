@@ -145,3 +145,11 @@ hr {
     text-align: justify;
     line-height: 1.35em;
 }
+
+.comment .circle {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}

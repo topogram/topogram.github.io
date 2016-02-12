@@ -1,0 +1,38 @@
+<div class="comment">
+  <p>
+  <img src="http://www.avatarpro.biz/avatar?s=30" class="circle" alt="">
+  <b>Dave</b>
+  <code>Wow this data is so bad! Did you see it ?</code>
+  </p>
+</div>
+
+<form id="fakeCommentForm" class="">
+  <label for="exampleMessage">Message</label>
+  <textarea class="u-full-width" placeholder="Hi Dave &hellip;" id="exampleMessage"></textarea>
+  <input class="button-primary" type="submit" value="Submit">
+</form>
+
+<script>
+d3.select("#fakeCommentForm").on("submit", function(e){
+  d3.event.preventDefault();
+  var inp = d3.select("#exampleMessage");
+  var value = inp.property("value")
+  if(value) {
+    var comment = d3.select("#fakeCommentForm")
+      .insert("div",":first-child")
+      .attr("class", "comment")
+      .insert("p")
+    comment.insert('img')
+      .attr("class","circle")
+      .attr('src',"http://www.avatarpro.biz/avatar?s=30?"+(Math.random()*1000))
+    comment.insert("b")
+      .text("You")
+    var now = new Date();
+    comment.insert("code")
+      .text(value)
+      // .text(value + "--" + now.getFullYear()+"/"+now.getMonth()+"/"+now.getDate()+" at " +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds() )
+  }
+
+})
+
+</script>

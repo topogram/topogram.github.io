@@ -2,18 +2,33 @@
 layout: page
 title: FAQ
 ---
-
-
-## General questions
-
----
 *You will find here answers to commonly ask questions about Topogram*
 
 #### What is Topogram ?
-*Topogram* is an open-source web toolkit to map social, semantic and spatio-temporal dynamics.
+*Topogram* is a web-based and open-source toolkit to explore the way people and/or machines interact. Topogram provides ways to represent and explore their relationships as networks of activities.
+
+### What is it used for ?
+
+People use Topogram to understand organizations and arrangements of places, words, people and things.
+
+For instance :
+
+* What does the French professional network of car manufacturers looks like ?
+* How does startup communities in Myanmar relates to the idea of sustainable development ?
+* What are the keywords that links volunteers of my organization together ?
+* etc.  
+
+### How is it possible ?
+
+Topogram relies on complementaries approaches :
+
+* **Data Analysis** : Topogram offers tools to produce networks from raw data (ex. conversations on social media, email lists, file transfers logs, etc.)
+* **Exploration** : The visualization interface allow to explore social, semantic and spatio-temporal aspects of the data with complex queries.
+* **Investigation**: All the graphs can be edited, annotated, augmented and shared with a team to produce solids representations of facts.
 
 
 #### Why Topogram ?
+
 It answers the growing need for interactive mapping of complex online and offline interactions. Also because you need to be able to make sense of a bunch of text data without hours of development. Finally, because you may want to own your research environment and still be able to use it in your web browser so you can share results and analysis process easily.
 
 #### How does it work ?
