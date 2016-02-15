@@ -3,29 +3,23 @@ layout: page
 title: Install Topogram
 ---
 
-Tested on Debian Jessie.
-
-### Topogram
-
-
-    pip install topogram
-
-### Topogram API
-
-Python, Mongo and Redis are required.
-
-    git clone http://github.com/topogram/topogram-server
-    cd topogram-server
-    pip install -r requirements.txt
-    rqworker taf # run the data worker
-    python run.py # run the web server
-
-
+*We try to keep Topogram's installation minimal, so you can easily test it.*
 
 ### Topogram Client
 
-Meteor is required - can be installed with ```npm -g install meteor```
 
     git clone http://github.com/topogram/topogram-client
     cd topogram-client
     meteor
+
+Topogram-client is based on [Meteor JS](https://www.meteor.com/). You can install it following the official [Install procedure](https://www.meteor.com/install) for Mac, Windows and Linux.  
+More details available on the [README.md](https://github.com/topogram/topogram-client)
+
+
+### Topogram Miner
+
+
+    pip install topogram
+
+The Topogram Python lib is available via [pip](https://pypi.python.org/pypi) repository.  
+Read also the [README.md](https://github.com/topogram/topogram) and the [docs](http://topogram.readthedocs.org).
