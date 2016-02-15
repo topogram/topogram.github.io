@@ -4,7 +4,7 @@ title: FAQ
 ---
 *You will find here answers to commonly ask questions about Topogram*
 
-#### What is Topogram ?
+### What is Topogram ?
 *Topogram* is a web-based and open-source toolkit to explore the way people and/or machines interact. Topogram provides ways to represent and explore their relationships as networks of activities.
 
 ### What is it used for ?
@@ -58,5 +58,6 @@ For now, you can quote this conference paper using this [Bibtex entry](/uploads/
 * Drop us an email at [hi@topogram.io](mailto:hi@topogram.io)
 * Open an issue on [Github](http://topogram/topogram)
 * Join the conversation on [Slack](http://topogram.slack.com)
+* By tweet [@topoviz](http://topogram/topoviz)
 
 Talk to you soon !
