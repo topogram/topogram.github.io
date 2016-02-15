@@ -11,7 +11,7 @@ email: hi@topogram.io
 description: Topogram is an open-source toolkit to process, visualize and analyze text as networks.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://topogram.io" # the base hostname & protocol for your site
-twitter_username: 
+twitter_username: topoviz
 github_username:  topogram
 
 # Build settings
