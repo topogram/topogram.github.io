@@ -57,6 +57,7 @@ You can use custom processors - see this example with [Elastic Search](). For mo
 
 [Topogram Client](https://github.com/topogram/topogram-client) is a web-based network visualization interface to browse, edit and publish networks.
 
+![](/images/Topogram-Network.png)
 ---
 
 <div class="row">
