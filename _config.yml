@@ -17,7 +17,3 @@ github_username:  topogram
 
 # Build settings
 markdown: kramdown
-
-collections:
-    docs:
-        output: true
