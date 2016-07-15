@@ -5,7 +5,7 @@ title: FAQ
 *You will find here answers to commonly ask questions about Topogram*
 
 ### What is Topogram ?
-*Topogram* is a web-based and open-source toolkit to explore the way people and/or machines interact. Topogram provides ways to represent and explore their relationships as networks of activities.
+*Topogram* is a web-based and open-source toolkit to represent and explore networks and relationships.
 
 ### What is it used for ?
 
@@ -22,10 +22,9 @@ For instance :
 
 Topogram relies on complementaries approaches :
 
-* **Data Analysis** : Topogram offers tools to produce networks from raw data (ex. conversations on social media, email lists, file transfers logs, etc.)
+* **Data Analysis** : Topogram offers tools to create networks from large data sets (ex. conversations on social media, email lists, file transfers logs, etc.)
 * **Exploration** : The visualization interface allow to explore social, semantic and spatio-temporal aspects of the data with complex queries.
-* **Investigation**: All the graphs can be edited, annotated, augmented and shared with a team to produce solids representations of facts.
-
+* **Investigation**: All the graphs can be edited, annotated, augmented and shared within a team to produce solids representations of facts.
 
 #### Why Topogram ?
 
@@ -35,18 +34,13 @@ It answers the growing need for interactive mapping of complex online and offlin
 See the [How It Works](/HowItWorks) section.
 
 #### How can I start to use Topogram ?
-* Download and install Topogram on your own computer by following the [Install instructions](/install).
-* If you need to deploy it on a web server, just use the scripts at [topogram-deploy](https://github.com/topogram/topogram-deploy). The instructions are in the README file.
-* Topogram is also available as an online service on [app.topogram.io](https://app.topogram.io).
+Download and install Topogram on your own computer by following the instructions on the [Github rep](http://github.com/topogram/topogram)
 
 #### Which technology does Topogram use ?
-* All data analysis (crunch numbers, NLP, etc.) are made with [Python](http://python.org)
-* The web server is made with Python [Flask](http://flask.readthedocs.org) for the API, and use Redis for workers and Mongo for data storage. A mySQL/SQLite db is used to store user-related  informations (emails, passwords, contents, etc.)
-* The client is made with Meteor JS and use [d3.js](http://d3js.org), [Leaflet](http://leaflet.org) and [Cytoscape](http://js.cytoscape.org) to draw visualizations, networks and maps.
-
+Topogram is written in Javascript and make use of different frameworks for real-time data manipulations and visualization, such as : [Meteor JS](http://meteor.com), [Cytoscape](http://js.cytoscape.org), [d3.js](http://d3js.org) or [Leaflet](http://leaflet.org).
 
 #### Where does Topogram come from ?
-*Topogram* is evolved from the phD research of [Clément Renaud](http://clementrenaud.com) about Internet memes on the Chinese social network Sina Weibo. You can read the [thesis](clementrenaud.com/uploads/phD/thesis.pdf) for more background on the project.
+*Topogram* is evolved from the phD research of [Clément Renaud](http://clementrenaud.com) about Internet memes on the Chinese social network Sina Weibo. You can read the [thesis](http://clementrenaud.com/uploads/phD/thesis.pdf) for more background on the project.
 
 #### How can I quote Topogram in my paper ?
 For now, you can quote this conference paper using this [Bibtex entry](/uploads/topogram.bib)
@@ -57,7 +51,7 @@ For now, you can quote this conference paper using this [Bibtex entry](/uploads/
 
 * Drop us an email at [hi@topogram.io](mailto:hi@topogram.io)
 * Open an issue on [Github](http://topogram/topogram)
-* Join the conversation on [Slack](http://topogram.slack.com)
+* Join the conversation on [Gitter](http://gitter.com/topogram/topogram)
 * By tweet [@topoviz](http://topogram/topoviz)
 
 Talk to you soon !
