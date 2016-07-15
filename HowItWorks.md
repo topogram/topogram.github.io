@@ -3,9 +3,7 @@ layout: page
 title: How it Works
 ---
 
-[Topogram](https://github.com/topogram/topogram) is a collaborative interface to visualize, edit, annotate and publish graphs online.
 
-![](/images/Topogram-Network.png)
 
 ### Data
 ---
