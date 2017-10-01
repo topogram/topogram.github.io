@@ -4,8 +4,6 @@
 
 [![Build Status](https://travis-ci.org/topogram/topogram.svg?branch=api)](https://travis-ci.org/topogram/topogram)
 
-[<img align="right" src="https://topogram.slack.com/badge.svg">](https://firstcontributions.herokuapp.com)
-
 ### Features
 
 - Time-based navigation in graph
