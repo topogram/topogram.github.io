@@ -19,6 +19,8 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #393B79;
 
+$secondary-text:   #65737F;
+
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
@@ -50,7 +52,8 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "card"
 ;
 
 
@@ -89,7 +92,7 @@ h2 {
 
 p.subtitle {
   font-size: 1.1em;
-  color : #65737F
+  color : $secondary-text;
 }
 
 .horizontal-rule:after {
@@ -141,9 +144,12 @@ p.subtitle {
 }
 
 
-#calls {
+#intro {
+  background: $background-color;
   text-align: center;
-  margin : 2em 0;
+  padding : 6em 0 1.5em 0;
+  margin-bottom : 4.5em;
+
 }
 
 #description {
@@ -157,12 +163,10 @@ p.subtitle {
 
 #features {
   background-color:$background-color;
-  .features-image {
-    padding : 1.5em 0;
-  }
-  img {
-    box-shadow: 0 0 120px rgba(0,0,0,0.25);
-  }
+  text-align: center;
+  padding : 2em 0;
+  margin: 0 auto;
+  width: 30%;
 
   ul {
     list-style: none;
@@ -170,9 +174,6 @@ p.subtitle {
     padding: 0;
     width: 30%;
     width : 100%;
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
   }
 
   li {
@@ -184,8 +185,52 @@ p.subtitle {
     }
   }
 
+}
+
+#actions {
+  background-color:$background-color;
+  margin: 0 auto;
+  padding : 2em;
+  text-align: center;
+  width: 30%;
+
+  .button {
+    height : 5rem;
+    line-height: 5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
   .more {
-    font-size: 1.2rem
+    padding-top: 1em;
+    font-size: 1.5rem
+  }
+}
+
+.subheader {
+  color : $secondary-text;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+#showcase {
+  background: $background-color;
+  padding: 4em;
+
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+
+  }
+
+  .card {
+    flex: 0 0 auto;
+    display: inline-block;
   }
 }
 
@@ -207,6 +252,7 @@ p.subtitle {
 #partners {
 
   background-color: $background-color;
+  margin-top: 3em;
   padding : 3em 0;
 
   ul {
@@ -224,27 +270,16 @@ p.subtitle {
 }
 
 #contact {
-  margin: 3em 0;
+  margin: 2em 0;
+  padding: 4em 0;
   text-align: center;
+  background: $background-color;
+
   h4 {
     width: 60%;
     margin: 0 auto;
   }
 }
-.header {
-  text-align: center;
-  padding : 6em 0;
-}
-
-hr {
-  margin: 1em 0;
-}
-
-.lead {
-  font-size: 1.5em;
-}
-
-
 
 #pricing {
   .header {

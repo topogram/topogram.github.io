@@ -8,7 +8,7 @@
 
 <section id="intro" class="header container">
   <header>
-    <p>>> logo goes here <<</p>
+    <!-- <p>>> logo goes here <<</p> -->
     <h1>Topogram</h1>
     <h4>{{ site.tagline }}</h4>
     <p>{{ site.subtitle }}</p>
@@ -30,26 +30,16 @@
   </div>
 </section>
 
-<section id="features" class="container row">
-  <div class="six columns features-image justify-center">
-    <img src="/images/Topogram-Map.png" alt="GIF demo" />
-  </div>
+<section id="features" class="row">
+  {% include features.html %}
+</section>
 
-  <div class="six columns">
-    <h2 class="horizontal-rule">Features</h2>
-    {% include features.html %}
-    <br>
-    <a class='button button-primary' href="http://app.topogram.io">Try Online</a>
-    <p class="more">
-      <a href="http://topogram.io/docs">
-        Read the Docs
-      </a>
-      <span class="">|</span>
-      <a href="http://github.com/topogram/">
-        View on Github
-      </a>
-    </p>
-  </div>
+<section id="actions">
+  {% include actions.html %}
+</section>
+
+<section id="showcase">
+  {% include showcase.html %}
 </section>
 
 <section id="news">
@@ -58,6 +48,10 @@
 
 <section id="partners">
   {% include partners.html %}
+</section>
+
+<section id="contact">
+  {% include contact.html %}
 </section>
 
 {% include footer.html %}

@@ -1,0 +1,50 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 30px rgba(0,0,0,.15);
+
+  h5 {
+    line-height: 1.3em;
+  }
+
+  &-subtitle {
+    margin: .3em 0;
+    color: $secondary-text;
+    text-transform: uppercase;
+    font-size: .9em
+  }
+}
+
+
+.example-header {
+  height: 10rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $background-color;
+  flex-grow: 0;
+  flex-shrink: 1;
+  text-align: center;
+  font-size: 1.5em
+}
+
+.example-body {
+  background: $background-color;
+  padding: 1.5rem 2rem 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.example-footer {
+  background: $background-color;
+  padding: .5rem 2rem 2rem;
+  flex-grow: 0;
+  flex-shrink: 1;
+  .copy-link,
+  .open-desktop {
+    display: inline-block;
+    font-size: .75rem;
+  }
+}
