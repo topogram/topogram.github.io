@@ -1,38 +1,73 @@
 ---
-layout: default
 ---
 
-<section class="header">
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<section id="intro" class="header container">
+  <header>
+    <p>>> logo goes here <<</p>
     <h1>Topogram</h1>
     <h4>{{ site.tagline }}</h4>
-    <p>{{ site.description }}</p>
-    <a class='button button-primary' href="http://github.com/topogram/topogram">Download</a>
-    <a class='button button-default' href="https://app.topogram.io">Try it out</a>
+    <p>{{ site.subtitle }}</p>
+  </header>
+  <div id="particles"></div>
 </section>
 
-<section id="slideshow" class="bss-slides full-width">
-  <figure>
-    <img alt="Second slide" src="/images/Topogram-Network.png">
-  </figure>
-  <figure>
-    <img alt="Third slide" src="/images/Topogram-Map.png">
-  </figure>
-  <figure>
-    <img alt="Third slide" src="/images/screencapture-localhost-3000-topograms-GqwFtbLxBcS96iFbQ-1452967947399.png">
-  </figure>
+<section id="splash">
+  <div class="splash-visual ">
+    <img alt="Topogram main visual" src="/images/Topogram-Network.png">
+  </div>
 </section>
 
+<section id="description">
+  <div class="container">
+    <h5>
+      {{site.description}}
+    </h5>
+  </div>
+</section>
 
-<script src=" {{ "/js/jquery.js" | prepend: site.baseurl }} " charset="utf-8"></script>
-<script src=" {{ "/js/jquery.prettyPhoto.js" | prepend: site.baseurl }} " charset="utf-8"></script>
-<script src=" {{ "/js/betterSimpleSlideshow.js" | prepend: site.baseurl }} " charset="utf-8"></script>
+<section id="features" class="container row">
+  <div class="six columns features-image justify-center">
+    <img src="/images/Topogram-Map.png" alt="GIF demo" />
+  </div>
+
+  <div class="six columns">
+    <h2 class="horizontal-rule">Features</h2>
+    {% include features.html %}
+    <br>
+    <a class='button button-primary' href="http://app.topogram.io">Try Online</a>
+    <p class="more">
+      <a href="http://topogram.io/docs">
+        Read the Docs
+      </a>
+      <span class="">|</span>
+      <a href="http://github.com/topogram/">
+        View on Github
+      </a>
+    </p>
+  </div>
+</section>
+
+<section id="news">
+  {% include news.html %}
+</section>
+
+<section id="partners">
+  {% include partners.html %}
+</section>
+
+{% include footer.html %}
+
+<script src=" {{ "/js/particles.js" | prepend: site.baseurl }} " charset="utf-8"></script>
 <script>
-  // console.log("hello Homepage");
 
-  makeBSS('#slideshow'); // create main slideshow
-
-  $("a.preview").prettyPhoto({
-		social_tools: false
-	});
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles', '/js/particlesjs-config.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 
 </script>

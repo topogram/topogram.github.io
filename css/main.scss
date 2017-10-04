@@ -7,6 +7,7 @@
 
 // Our variables
 $base-font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$title-font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -16,7 +17,7 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #393B79;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -65,12 +66,160 @@ body {
   color:$text-color;
 }
 
-#slideshow {
-  height: 450px;
-  overflow: hidden;
-  margin: 0 auto;
-  figure {
+h1 {
+    font-size: 60px;
+    font-weight: 100;
+    font-style: normal;
     text-align: center;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    margin: 20px 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 3.0rem;
+    font-weight: 100;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    margin: 40px 0 1.2rem 0;
+    padding: 0;
+}
+
+p.subtitle {
+  font-size: 1.1em;
+  color : #65737F
+}
+
+.horizontal-rule:after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 4px;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+    background-color: $brand-color;
+}
+
+#particles {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top:0;
+  left :0;
+  z-index:-1;
+}
+
+#splash {
+  .splash-visual {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background: $background-color;
+    display: block;
+    margin-top: 1.25rem;
+    margin-bottom: 3.5rem;
+    border-radius: .25rem;
+    overflow: hidden;
+    animation: fadeInDown .5s ease;
+    box-shadow: 0 0 120px rgba(0,0,0,0.25);
+  }
+}
+
+@keyframes fadeInDown {
+
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+#calls {
+  text-align: center;
+  margin : 2em 0;
+}
+
+#description {
+  background-color:$background-color;
+  margin-top: 5em;
+  padding: 4em 0 4em 0;
+  h5 {
+    font-size: 1.7em;
+  }
+}
+
+#features {
+  background-color:$background-color;
+  .features-image {
+    padding : 1.5em 0;
+  }
+  img {
+    box-shadow: 0 0 120px rgba(0,0,0,0.25);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 30%;
+    width : 100%;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
+  li {
+    padding: 10px 0;
+    // margin: 0 15px;
+    border-bottom: 1px dashed #eee;
+    i {
+      padding-right : 1em
+    }
+  }
+
+  .more {
+    font-size: 1.2rem
+  }
+}
+
+#news {
+  background: #F6F7F8;
+  margin : 3em 0 0 0;
+  padding : 2em 0;
+
+  ul {
+    margin: 4em 0;
+    text-align: left;
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+
+#partners {
+
+  background-color: $background-color;
+  padding : 3em 0;
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: 2em
+  }
+  img {
+    max-height: 5em;
+    max-width: 20em;
   }
 }
 
@@ -95,7 +244,9 @@ hr {
   font-size: 1.5em;
 }
 
-#features {
+
+
+#pricing {
   .header {
     margin:2em 0 ;
   }
@@ -118,11 +269,13 @@ hr {
     padding: 15px 0;
     font-size: 18px;
     font-weight: 700;
+    border-bottom: none;
   }
   .plan li.plan-price {
     color: #666;
     padding: 15px 0;
     font-size: 48px;
+    border-bottom: none;
   }
   .plan li.plan-action {
     margin-top: 20px;
@@ -133,10 +286,6 @@ hr {
     text-align: right;
     font-size: .8em;
   }
-}
-
-#docs ul{
-  list-style: none;
 }
 
 #services p {

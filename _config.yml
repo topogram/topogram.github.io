@@ -8,12 +8,21 @@
 # Site settings
 title: Topogram
 email: hi@topogram.io
+subtitle: Open-source toolkit to visualize and analyze text as networks.
 tagline: Social network analysis for Humans
-description: Open-source toolkit to visualize and analyze text as networks.
+description: Topogram is an open-source software to visualize changes in networks over time and space. It relies on web technologies to provide a web experience.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://topogram.io" # the base hostname & protocol for your site
 twitter_username: topoviz
 github_username:  topogram
+contact_email:  contact@topogram.io
 
 # Build settings
 markdown: kramdown
+
+# collections
+collections:
+    events:
+        output: true
+
+future: true
