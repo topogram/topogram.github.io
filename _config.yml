@@ -8,7 +8,7 @@
 # Site settings
 title: Topogram
 email: hi@topogram.io
-subtitle: Open-source toolkit to visualize and analyze text as networks.
+subtitle: "Visualize how networks change over time and space."
 tagline: Social network analysis for Humans
 description: Topogram is an open-source software to visualize changes in networks over time and space. It relies on web technologies to provide a web experience.
 baseurl: "" # the subpath of your site, e.g. /blog
