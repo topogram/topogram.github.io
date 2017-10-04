@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/topogram/topogram.svg?branch=api)](https://travis-ci.org/topogram/topogram)
 
+Try it online at [app.topogram.io](https://app.topogram.io) or install your own.
+
 ### Features
 
 - Time-based navigation in graph
