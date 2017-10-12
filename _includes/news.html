@@ -16,7 +16,9 @@
           <br>
           <small>
             <time datetime="{{post.date}}">{{post.date | date: '%B %d, %Y' }}</time>
+            {% if post.place %}
             - {{post.place}}, {{post.city}}
+            {% endif %}
           </small>
         </p>
         </li>
