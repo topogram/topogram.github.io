@@ -47,8 +47,8 @@ You can add geographic and time information to the nodes.
 | name  | String | optional | The name of the node | 'Michael' |
 | lat   | Float  | optional | Latitude (in degrees) | -6.7589 |
 | lng   | Float  | optional | Longitude (in degrees)| 105.8671 |
-| start | Date   | optional | Date when the node started existing | 2015 |
-| end   | Date   | optional | Date when the node stopped existing | 2012 |
+| start | Date   | optional | When the node started existing (Json ISO format) | 2010-08-03T10:00:00.000000 |
+| end   | Date   | optional | When the node stopped existing (Json ISO format) | 2010-09-02T10:00:00.000000 |
 | color | String | optional | Color of the node | '#555000'|
 | weight| Float  | optional | Weight of the node | 4 |
 | group | String | optional | Some category to classify the node | 'male'|
